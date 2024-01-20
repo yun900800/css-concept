@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box {
+    width: 360px;
+    background: #efefef;
+    padding: 4px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 7px;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px; */
+    padding: 8px;
+}
+.card-image img {
+    border-radius: 7px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card-content {
+    /* border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px; */
+    padding: 8px;
+    text-align: center;
+}
+
+.c-button {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    min-width: 120px;
+    color: #fff;
+    background: linear-gradient(to bottom, #00acee, #0072e0);
+
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 26px;
+
+    border-radius: 100px;
+    text-decoration: none;
+
+    transition: 0.3s ease-out;
+    background-origin: border-box;
+    text-align: center;
+    cursor: pointer;
+}
+
+.c-button:hover {
+    box-shadow: 0 0 0 6px rgba(#00acee, 0.2),
+     0 8px 10px 8px rgba(#00acee, 0.2);
+}
+
+.c-button.slide-start {
+    overflow: hidden; 
+}
+
+.c-button.slide-start span {
+    position: relative;
+    z-index: 1;
+}
+
+.c-button.slide-start::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.25;
+    border-radius: 100px;
+    transform: translateX(-100%);
+    transition: 0.2s ease-in;
+}
+
+.c-button.slide-start:hover::before {
+    transform: translateX(0);
+}
+
+.c-button.slide-bottom {
+    overflow: hidden; 
+}
+
+.c-button.slide-bottom span {
+    position: relative;
+    z-index: 1;
+}
+
+.c-button.slide-bottom::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.25;
+    border-radius: 100px;
+    transform: translateY(-100%);
+    transition: 0.2s ease-in;
+}
+
+.c-button.slide-bottom:hover::before {
+    transform: translateX(0);
+}
+
+.c-button.fade-center {
+    overflow: hidden;
+}
+
+.c-button.fade-center span {
+    position: relative;
+    z-index: 1;
+}
+
+.c-button.fade-center::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.25;
+    border-radius: 100px;
+    transform: scale(0);
+    transition: 0.2s ease-in;
+}
+
+.c-button.fade-center:hover::after{
+    transform: scale(1);
+}
