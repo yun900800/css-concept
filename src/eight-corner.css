@@ -3,3 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.element {
+    width: 300px;
+    height: 300px;
+    background-color: #009966;
+    opacity: .8;
+    position: relative;
+    margin: 100px auto;
+}
+.element::after {
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 300px;
+    display: block;
+    background-color: #009966;
+    opacity: .2;
+    transform: rotateZ(45deg);
+}
