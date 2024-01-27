@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+.element {
+    width: 200px;
+    height: 200px;
+    /* border-top-left-radius: 30% 30%;
+     * border-top-right-radius: 70% 30%;
+     * border-bottom-right-radius: 70% 70%;
+     * border-bottom-left-radius: 30% 70%;
+     * 
+     * 这里的简单理解就是/前面的值与后面的值进行组合,构成四个角的比例线条,注意
+     * 一点是组合方向一定是顺时针
+     * 如果有隐藏值,比如三组值的话,中间的值是对角线的值
+     * 比如 border-radius:30% 70% 30% / 28% 30% 72% ;
+     */
+    border-radius: 30% 70% 70% 30% / 28% 30% 70% 72% ;
+    background: #fd4567;
+}
+
+.element1 {
+    width: 200px;
+    height: 200px;
+    /* border-top-left-radius: 30% 28%;
+     * border-top-right-radius: 70% 30%;
+     * border-bottom-right-radius: 30% 72%;
+     * border-bottom-left-radius: 70% 30%;
+     * 
+     */
+    border-radius:30% 70% 30% / 28% 30% 72% ;
+    background: #fd7567;
+}
+
+.element2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    /* 
+     * box-shadow 默认有6个属性 x偏移,y偏移,blur模糊度, spread 扩展度, color 颜色
+     * 最后一个是默认向元素外部扩展,inset则向内部扩展,而inset又可以包含5个属性
+     */
+    box-shadow: 
+        0 0 20px #fff,
+        -20px 0 80px #f0f,
+        20px 0 80px #0ff,
+        inset 0 0 50px #fff,
+        inset -50px 0 80px #f0f,
+        inset 50px 0 80px #0ff,
+        inset -50px 0 300px #f0f,
+        inset 50px 0 300px #0ff;
+        animation: pulsate 6s linear infinite;
+}
+
+@keyframes pulsate {
+    50% {
+        box-shadow: 
+        0 0 20px #fff,
+        20px 0 80px #f0f,
+        -20px 0 80px #0ff,
+        inset 0 0 50px #fff,
+        inset 50px 0 80px #f0f,
+        inset -50px 0 80px #0ff,
+        inset 50px 0 300px #f0f,
+        inset -50px 0 300px #0ff;
+    }
+}
