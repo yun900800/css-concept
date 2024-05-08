@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <head>
+        <title>legacy box-sizing example</title>
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="utils.css">
+        <style>
+            .parent {
+              width: 200px;
+              border: 2px solid black;
+            }
+            .box {
+              width: 100%;
+              border: 2px solid hotpink;
+              padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="legacy">
+          <nav>
+            <!-- Legacy stuff here -->
+            <div class="parent">
+                <div class="box"></div>
+              </div>
+          </nav>
+        </header>
+        <main>
+          <section>
+            <!-- Modern stuff here -->
+            <div class="parent">
+                <div class="box"></div>
+              </div>
+          </section>
+          <aside class="legacy">
+            <!-- Legacy stuff here -->
+            <div class="parent">
+                <div class="box"></div>
+              </div>
+          </aside>
+        </main>
+      </body>
+</html>
