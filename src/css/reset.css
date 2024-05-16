@@ -40,8 +40,8 @@ html {
    */
    input, button, textarea, select {
     font: inherit;
-    /* 避免手机自动zoom */
-    font-size: 1rem;
+    /* 避免手机自动zoom */ 
+    /* font-size: 1rem; */
    }
 
    /*
