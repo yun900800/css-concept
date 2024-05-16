@@ -14,6 +14,7 @@
         分组和多选择
     - css布局和属性
         重点掌握布局算法
+        常用的一些经典属性的使用技巧
     - css动画
         transition属性
         @keyframes
